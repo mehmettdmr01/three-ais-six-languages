@@ -33,7 +33,7 @@ Simulation loop only (the program's own `sim_ms`), best of 7 interleaved rounds,
 ## What to keep in mind
 
 - One task, one machine, one run per agent. Models change every month.
-- Gemini ran as **3.8 Flash**: the Antigravity CLI I used had no Pro model. Claude ran Opus 5.5, Codex GPT-5.6 Terra (the best model my ChatGPT account allowed in Codex).
+- Gemini ran as **3.8 Flash**: the Antigravity CLI I used had no Pro model. Claude ran Opus 5.5, its top model. Codex ran GPT-5.6 Terra, which Codex's own model list calls an "older balanced model": the default GPT-6.1 is not allowed on my ChatGPT account, and the only newer entries were a hidden chat model and a small "fast and affordable" one. **So only Claude ran its best model.** Keep that in mind when reading the table.
 - **Gemini's first two runs** stopped after 14 s and about 25 s: the Antigravity CLI ends the whole run at the first command
   that is not on its allow list. The third run allowed every command inside [sandbox-strict.sb](sandbox-strict.sb) (writes only to its own folder).
 - The three agents ran **at the same time** on the same 8 GB laptop, so their own timings while working were noisy.
