@@ -1,0 +1,24 @@
+(version 1)
+(allow default)
+; writes only into the run folder, temp folders and the agent's own state
+(deny file-write*)
+(allow file-write*
+  (subpath (param "RUN"))
+  (subpath "/private/tmp")
+  (subpath "/private/var/folders")
+  (subpath "/dev")
+  (subpath (string-append (param "HOME") "/.gemini"))
+  (subpath (string-append (param "HOME") "/.antigravity"))
+  (subpath (string-append (param "HOME") "/Library/Caches"))
+  (subpath (string-append (param "HOME") "/Library/Application Support")))
+; and cannot read the reference solutions, the other runs or any keys
+(deny file-read* file-write*
+  (subpath (string-append (param "HOME") "/Developer"))
+  (subpath (string-append (param "HOME") "/Desktop"))
+  (subpath (string-append (param "HOME") "/Documents"))
+  (subpath (string-append (param "HOME") "/Downloads"))
+  (subpath (string-append (param "HOME") "/.ssh"))
+  (subpath (string-append (param "HOME") "/.config"))
+  (subpath (string-append (param "HOME") "/.cache/agent-runs/claude"))
+  (subpath (string-append (param "HOME") "/.cache/agent-runs/codex"))
+  (subpath (string-append (param "HOME") "/.cache/agent-runs-build")))

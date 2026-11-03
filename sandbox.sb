@@ -1,0 +1,15 @@
+(version 1)
+(allow default)
+; the agents must not see the reference solutions, the other runs, or any keys
+(deny file-read* file-write*
+  (subpath (string-append (param "HOME") "/Developer"))
+  (subpath (string-append (param "HOME") "/Desktop"))
+  (subpath (string-append (param "HOME") "/Documents"))
+  (subpath (string-append (param "HOME") "/Downloads"))
+  (subpath (string-append (param "HOME") "/.ssh"))
+  (subpath (string-append (param "HOME") "/.config/pufi"))
+  (subpath (string-append (param "HOME") "/.cache/agent-runs-ref")))
+(deny file-write*
+  (literal (string-append (param "HOME") "/.zshrc"))
+  (literal (string-append (param "HOME") "/.zprofile"))
+  (subpath (string-append (param "HOME") "/Library/LaunchAgents")))

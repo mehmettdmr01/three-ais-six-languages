@@ -1,0 +1,2182 @@
+{
+ "machine": "MacBook Air M1 2020, 8 GB",
+ "load_before": [
+  2.14697265625,
+  2.16064453125,
+  2.02880859375
+ ],
+ "programs": {
+  "claude_c": {
+   "lang": "c",
+   "ok": true,
+   "lines": 124,
+   "threads_in_source": false,
+   "build_s": 0.11,
+   "binary_kb": 33,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.469,
+     "cpu_s": 0.0112
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.0321,
+     "cpu_s": 0.0315
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0038,
+     "cpu_s": 0.0029
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.0087,
+     "cpu_s": 0.0076
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0024,
+     "cpu_s": 0.0017
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    1.333,
+    1.352,
+    1.33,
+    1.362,
+    1.327,
+    1.33,
+    1.327
+   ],
+   "wall": [
+    0.0038,
+    0.0038,
+    0.0038,
+    0.0038,
+    0.0038,
+    0.0038,
+    0.0037
+   ],
+   "wall_2000": [
+    0.0163,
+    0.0164,
+    0.0162
+   ],
+   "rss_kb": 1648,
+   "sim_ms_best": 1.327,
+   "wall_best": 0.0037,
+   "sim_ms_from_wall": 1.39
+  },
+  "claude_rust": {
+   "lang": "rust",
+   "ok": true,
+   "lines": 109,
+   "threads_in_source": false,
+   "build_s": 0.92,
+   "binary_kb": 464,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 3.1798,
+     "cpu_s": 0.0114
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.036,
+     "cpu_s": 0.0351
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0042,
+     "cpu_s": 0.0036
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.0079,
+     "cpu_s": 0.0074
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0026,
+     "cpu_s": 0.002
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    1.415,
+    1.442,
+    1.418,
+    1.417,
+    1.424,
+    1.442,
+    1.456
+   ],
+   "wall": [
+    0.0039,
+    0.0041,
+    0.0039,
+    0.0039,
+    0.0041,
+    0.0039,
+    0.004
+   ],
+   "wall_2000": [
+    0.0169,
+    0.0172,
+    0.0176
+   ],
+   "rss_kb": 1920,
+   "sim_ms_best": 1.415,
+   "wall_best": 0.0039,
+   "sim_ms_from_wall": 1.44
+  },
+  "claude_go": {
+   "lang": "go",
+   "ok": true,
+   "lines": 136,
+   "threads_in_source": false,
+   "build_s": 2.39,
+   "binary_kb": 2406,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.1766,
+     "cpu_s": 0.0068
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.0561,
+     "cpu_s": 0.0556
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0043,
+     "cpu_s": 0.0038
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.0084,
+     "cpu_s": 0.008
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.003,
+     "cpu_s": 0.0026
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    2.886,
+    2.926,
+    2.922,
+    2.851,
+    2.922,
+    2.899,
+    2.876
+   ],
+   "wall": [
+    0.0059,
+    0.006,
+    0.006,
+    0.0059,
+    0.0061,
+    0.0059,
+    0.0059
+   ],
+   "wall_2000": [
+    0.0317,
+    0.0319,
+    0.032
+   ],
+   "rss_kb": 4288,
+   "sim_ms_best": 2.851,
+   "wall_best": 0.0059,
+   "sim_ms_from_wall": 2.87
+  },
+  "claude_zig": {
+   "lang": "zig",
+   "ok": true,
+   "lines": 126,
+   "threads_in_source": false,
+   "build_s": 9.32,
+   "binary_kb": 419,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.3578,
+     "cpu_s": 0.0123
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.0328,
+     "cpu_s": 0.0319
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0045,
+     "cpu_s": 0.0038
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.0086,
+     "cpu_s": 0.008
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0029,
+     "cpu_s": 0.0023
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    1.281,
+    1.281,
+    1.27,
+    1.257,
+    1.26,
+    1.285,
+    1.254
+   ],
+   "wall": [
+    0.004,
+    0.004,
+    0.004,
+    0.0039,
+    0.004,
+    0.004,
+    0.0039
+   ],
+   "wall_2000": [
+    0.0155,
+    0.0155,
+    0.0155
+   ],
+   "rss_kb": 1936,
+   "sim_ms_best": 1.254,
+   "wall_best": 0.0039,
+   "sim_ms_from_wall": 1.29
+  },
+  "claude_python": {
+   "lang": "python",
+   "ok": true,
+   "lines": 96,
+   "threads_in_source": false,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.1067,
+     "cpu_s": 0.0757
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.1542,
+     "cpu_s": 0.1528
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0617,
+     "cpu_s": 0.0603
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.0671,
+     "cpu_s": 0.0655
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0628,
+     "cpu_s": 0.0615
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    9.568,
+    9.523,
+    9.473,
+    9.529,
+    9.479,
+    9.449,
+    9.521
+   ],
+   "wall": [
+    0.0675,
+    0.0679,
+    0.0688,
+    0.0677,
+    0.0671,
+    0.0691,
+    0.0682
+   ],
+   "wall_2000": [
+    0.1556,
+    0.1547,
+    0.155
+   ],
+   "rss_kb": 29392,
+   "sim_ms_best": 9.449,
+   "wall_best": 0.0671,
+   "sim_ms_from_wall": 9.73
+  },
+  "claude_js": {
+   "lang": "js",
+   "ok": true,
+   "lines": 107,
+   "threads_in_source": false,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.0663,
+     "cpu_s": 0.0682
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.1418,
+     "cpu_s": 0.1455
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0559,
+     "cpu_s": 0.0604
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.0669,
+     "cpu_s": 0.0701
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0512,
+     "cpu_s": 0.0528
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    13.423,
+    13.486,
+    13.486,
+    13.457,
+    13.451,
+    13.486,
+    13.476
+   ],
+   "wall": [
+    0.0647,
+    0.0651,
+    0.0649,
+    0.0649,
+    0.0645,
+    0.0649,
+    0.0653
+   ],
+   "wall_2000": [
+    0.1433,
+    0.1431,
+    0.1434
+   ],
+   "rss_kb": 47008,
+   "sim_ms_best": 13.423,
+   "wall_best": 0.0645,
+   "sim_ms_from_wall": 8.73
+  },
+  "codex_c": {
+   "lang": "c",
+   "ok": true,
+   "lines": 59,
+   "threads_in_source": false,
+   "build_s": 0.24,
+   "binary_kb": 32,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 1.1682,
+     "cpu_s": 0.0273
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.1023,
+     "cpu_s": 0.1015
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0056,
+     "cpu_s": 0.0051
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.0261,
+     "cpu_s": 0.0255
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0021,
+     "cpu_s": 0.0016
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    7.743,
+    7.678,
+    7.741,
+    7.737,
+    7.747,
+    7.755,
+    7.758
+   ],
+   "wall": [
+    0.0139,
+    0.0139,
+    0.0139,
+    0.0139,
+    0.0139,
+    0.014,
+    0.0142
+   ],
+   "wall_2000": [
+    0.0839,
+    0.0835,
+    0.0841
+   ],
+   "rss_kb": 1792,
+   "sim_ms_best": 7.678,
+   "wall_best": 0.0139,
+   "sim_ms_from_wall": 7.73
+  },
+  "codex_rust": {
+   "lang": "rust",
+   "ok": true,
+   "lines": 35,
+   "threads_in_source": false,
+   "build_s": 0.44,
+   "binary_kb": 463,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.3323,
+     "cpu_s": 0.0282
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.0966,
+     "cpu_s": 0.0957
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0046,
+     "cpu_s": 0.0042
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.0102,
+     "cpu_s": 0.0098
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0022,
+     "cpu_s": 0.0018
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    7.453,
+    7.411,
+    7.463,
+    7.444,
+    7.463,
+    7.474,
+    7.48
+   ],
+   "wall": [
+    0.0096,
+    0.0095,
+    0.0097,
+    0.0096,
+    0.0096,
+    0.0097,
+    0.0097
+   ],
+   "wall_2000": [
+    0.0766,
+    0.0766,
+    0.0768
+   ],
+   "rss_kb": 2320,
+   "sim_ms_best": 7.411,
+   "wall_best": 0.0095,
+   "sim_ms_from_wall": 7.46
+  },
+  "codex_go": {
+   "lang": "go",
+   "ok": true,
+   "lines": 24,
+   "threads_in_source": false,
+   "build_s": 2.2,
+   "binary_kb": 2390,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.5527,
+     "cpu_s": 0.1596
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 1.1408,
+     "cpu_s": 1.1409
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0325,
+     "cpu_s": 0.0322
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.1155,
+     "cpu_s": 0.1153
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.007,
+     "cpu_s": 0.0066
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    115.643,
+    115.465,
+    115.696,
+    115.703,
+    115.794,
+    115.79,
+    116.121
+   ],
+   "wall": [
+    0.1189,
+    0.1187,
+    0.119,
+    0.1188,
+    0.119,
+    0.119,
+    0.1193
+   ],
+   "wall_2000": [
+    1.1615,
+    1.1612,
+    1.1638
+   ],
+   "rss_kb": 4768,
+   "sim_ms_best": 115.465,
+   "wall_best": 0.1187,
+   "sim_ms_from_wall": 115.83
+  },
+  "codex_zig": {
+   "lang": "zig",
+   "ok": true,
+   "lines": 75,
+   "threads_in_source": false,
+   "build_s": 8.98,
+   "binary_kb": 403,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.3589,
+     "cpu_s": 0.0206
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.0866,
+     "cpu_s": 0.0858
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0044,
+     "cpu_s": 0.0039
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.009,
+     "cpu_s": 0.0086
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0023,
+     "cpu_s": 0.0019
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    5.958,
+    5.906,
+    5.973,
+    5.953,
+    5.968,
+    5.961,
+    5.928
+   ],
+   "wall": [
+    0.0083,
+    0.0082,
+    0.0083,
+    0.0083,
+    0.0083,
+    0.0083,
+    0.0083
+   ],
+   "wall_2000": [
+    0.062,
+    0.0618,
+    0.0621
+   ],
+   "rss_kb": 2304,
+   "sim_ms_best": 5.906,
+   "wall_best": 0.0082,
+   "sim_ms_from_wall": 5.96
+  },
+  "codex_python": {
+   "lang": "python",
+   "ok": true,
+   "lines": 45,
+   "threads_in_source": false,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.2576,
+     "cpu_s": 0.2301
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 1.6832,
+     "cpu_s": 1.6818
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.1014,
+     "cpu_s": 0.1001
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.2039,
+     "cpu_s": 0.2024
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0682,
+     "cpu_s": 0.0668
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    165.546,
+    166.559,
+    167.096,
+    166.726,
+    167.066,
+    157.923,
+    154.086
+   ],
+   "wall": [
+    0.2246,
+    0.2238,
+    0.225,
+    0.226,
+    0.225,
+    0.2169,
+    0.2117
+   ],
+   "wall_2000": [
+    1.7308,
+    1.727,
+    1.7307
+   ],
+   "rss_kb": 29328,
+   "sim_ms_best": 154.086,
+   "wall_best": 0.2117,
+   "sim_ms_from_wall": 168.37
+  },
+  "codex_js": {
+   "lang": "js",
+   "ok": true,
+   "lines": 29,
+   "threads_in_source": false,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.2165,
+     "cpu_s": 0.2199
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 1.6498,
+     "cpu_s": 1.6538
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0949,
+     "cpu_s": 0.0989
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.2124,
+     "cpu_s": 0.2164
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0563,
+     "cpu_s": 0.0586
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    164.111,
+    164.196,
+    164.077,
+    162.483,
+    164.985,
+    164.687,
+    164.707
+   ],
+   "wall": [
+    0.2162,
+    0.2162,
+    0.2152,
+    0.2141,
+    0.2167,
+    0.2165,
+    0.2159
+   ],
+   "wall_2000": [
+    1.6706,
+    1.6707,
+    1.6719
+   ],
+   "rss_kb": 47584,
+   "sim_ms_best": 162.483,
+   "wall_best": 0.2141,
+   "sim_ms_from_wall": 161.83
+  },
+  "gemini_c": {
+   "lang": "c",
+   "ok": true,
+   "lines": 143,
+   "threads_in_source": false,
+   "build_s": 0.26,
+   "binary_kb": 33,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.2593,
+     "cpu_s": 0.0152
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.0522,
+     "cpu_s": 0.0515
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0034,
+     "cpu_s": 0.0029
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.0077,
+     "cpu_s": 0.0072
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.002,
+     "cpu_s": 0.0015
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0
+   ],
+   "wall": [
+    0.0051,
+    0.0051,
+    0.0049,
+    0.0051,
+    0.0051,
+    0.0051,
+    0.005
+   ],
+   "wall_2000": [
+    0.0292,
+    0.029,
+    0.029
+   ],
+   "rss_kb": 1584,
+   "sim_ms_best": 3.0,
+   "wall_best": 0.0049,
+   "sim_ms_from_wall": 2.68
+  },
+  "gemini_rust": {
+   "lang": "rust",
+   "ok": true,
+   "lines": 145,
+   "threads_in_source": false,
+   "build_s": 0.49,
+   "binary_kb": 446,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.282,
+     "cpu_s": 0.0175
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.0567,
+     "cpu_s": 0.056
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0037,
+     "cpu_s": 0.0032
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.0081,
+     "cpu_s": 0.0076
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0022,
+     "cpu_s": 0.0018
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0
+   ],
+   "wall": [
+    0.0057,
+    0.0057,
+    0.0056,
+    0.0058,
+    0.0057,
+    0.0057,
+    0.0056
+   ],
+   "wall_2000": [
+    0.0336,
+    0.0337,
+    0.0336
+   ],
+   "rss_kb": 1824,
+   "sim_ms_best": 3.0,
+   "wall_best": 0.0056,
+   "sim_ms_from_wall": 3.11
+  },
+  "gemini_go": {
+   "lang": "go",
+   "ok": true,
+   "lines": 168,
+   "threads_in_source": false,
+   "build_s": 2.3,
+   "binary_kb": 2390,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.3037,
+     "cpu_s": 0.0218
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.0736,
+     "cpu_s": 0.073
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0043,
+     "cpu_s": 0.0039
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.01,
+     "cpu_s": 0.0096
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0027,
+     "cpu_s": 0.0023
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    5.0,
+    5.0,
+    5.0,
+    5.0,
+    5.0,
+    5.0,
+    5.0
+   ],
+   "wall": [
+    0.0077,
+    0.0077,
+    0.0075,
+    0.0077,
+    0.0077,
+    0.0077,
+    0.0077
+   ],
+   "wall_2000": [
+    0.0493,
+    0.0492,
+    0.0494
+   ],
+   "rss_kb": 4272,
+   "sim_ms_best": 5.0,
+   "wall_best": 0.0075,
+   "sim_ms_from_wall": 4.63
+  },
+  "gemini_zig": {
+   "lang": "zig",
+   "ok": true,
+   "lines": 152,
+   "threads_in_source": false,
+   "build_s": 9.02,
+   "binary_kb": 388,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.7259,
+     "cpu_s": 0.0176
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.0533,
+     "cpu_s": 0.0526
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0039,
+     "cpu_s": 0.0034
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.0082,
+     "cpu_s": 0.0077
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0023,
+     "cpu_s": 0.0019
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0,
+    3.0
+   ],
+   "wall": [
+    0.0055,
+    0.0054,
+    0.0053,
+    0.0055,
+    0.0055,
+    0.0055,
+    0.0055
+   ],
+   "wall_2000": [
+    0.0306,
+    0.0304,
+    0.0304
+   ],
+   "rss_kb": 1728,
+   "sim_ms_best": 3.0,
+   "wall_best": 0.0053,
+   "sim_ms_from_wall": 2.79
+  },
+  "gemini_python": {
+   "lang": "python",
+   "ok": true,
+   "lines": 101,
+   "threads_in_source": false,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.1531,
+     "cpu_s": 0.1248
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.2953,
+     "cpu_s": 0.294
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0826,
+     "cpu_s": 0.0813
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.2341,
+     "cpu_s": 0.2326
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0669,
+     "cpu_s": 0.0655
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    19.0,
+    19.0,
+    19.0,
+    19.0,
+    19.0,
+    19.0,
+    20.0
+   ],
+   "wall": [
+    0.1196,
+    0.1191,
+    0.119,
+    0.1192,
+    0.1195,
+    0.1187,
+    0.1233
+   ],
+   "wall_2000": [
+    0.2948,
+    0.2944,
+    0.2946
+   ],
+   "rss_kb": 29056,
+   "sim_ms_best": 19.0,
+   "wall_best": 0.1187,
+   "sim_ms_from_wall": 19.52
+  },
+  "gemini_js": {
+   "lang": "js",
+   "ok": true,
+   "lines": 117,
+   "threads_in_source": false,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.0803,
+     "cpu_s": 0.0905
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.2216,
+     "cpu_s": 0.2322
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0618,
+     "cpu_s": 0.0692
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.0823,
+     "cpu_s": 0.093
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0546,
+     "cpu_s": 0.0586
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    27.0,
+    28.0,
+    27.0,
+    27.0,
+    28.0,
+    27.0,
+    27.0
+   ],
+   "wall": [
+    0.0796,
+    0.0809,
+    0.0798,
+    0.0791,
+    0.0806,
+    0.079,
+    0.0798
+   ],
+   "wall_2000": [
+    0.2216,
+    0.2213,
+    0.2222
+   ],
+   "rss_kb": 49472,
+   "sim_ms_best": 27.0,
+   "wall_best": 0.079,
+   "sim_ms_from_wall": 15.81
+  },
+  "ref_c_fast": {
+   "lang": "c",
+   "ok": true,
+   "lines": 46,
+   "threads_in_source": false,
+   "build_s": 0.19,
+   "binary_kb": 33,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.2478,
+     "cpu_s": 0.0254
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.0879,
+     "cpu_s": 0.0871
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0036,
+     "cpu_s": 0.0031
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.0073,
+     "cpu_s": 0.0069
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0023,
+     "cpu_s": 0.0019
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    6.433,
+    6.418,
+    6.543,
+    6.432,
+    6.414,
+    6.423,
+    6.432
+   ],
+   "wall": [
+    0.0083,
+    0.0082,
+    0.0085,
+    0.0084,
+    0.0082,
+    0.0082,
+    0.0083
+   ],
+   "wall_2000": [
+    0.0664,
+    0.0659,
+    0.0664
+   ],
+   "rss_kb": 2048,
+   "sim_ms_best": 6.414,
+   "wall_best": 0.0082,
+   "sim_ms_from_wall": 6.41
+  },
+  "ref_c_bitpacked": {
+   "lang": "c",
+   "ok": true,
+   "lines": 63,
+   "threads_in_source": false,
+   "build_s": 0.07,
+   "binary_kb": 33,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 3.165,
+     "cpu_s": 0.0185
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.0607,
+     "cpu_s": 0.0599
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 6421,
+     "error": null,
+     "wall": 0.003,
+     "cpu_s": 0.0025
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 117650,
+     "error": null,
+     "wall": 0.0077,
+     "cpu_s": 0.0072
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0018,
+     "cpu_s": 0.0014
+    }
+   ],
+   "correct": false,
+   "multithread": false
+  },
+  "ref_rust_fast": {
+   "lang": "rust",
+   "ok": true,
+   "lines": 35,
+   "threads_in_source": false,
+   "build_s": 0.44,
+   "binary_kb": 463,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.1654,
+     "cpu_s": 0.0102
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.0801,
+     "cpu_s": 0.0794
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0036,
+     "cpu_s": 0.0031
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.0072,
+     "cpu_s": 0.0067
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0026,
+     "cpu_s": 0.002
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    5.321,
+    5.334,
+    5.44,
+    5.323,
+    5.36,
+    5.322,
+    5.326
+   ],
+   "wall": [
+    0.0075,
+    0.0075,
+    0.0078,
+    0.0075,
+    0.0075,
+    0.0074,
+    0.0075
+   ],
+   "wall_2000": [
+    0.0555,
+    0.0554,
+    0.0556
+   ],
+   "rss_kb": 2384,
+   "sim_ms_best": 5.321,
+   "wall_best": 0.0074,
+   "sim_ms_from_wall": 5.33
+  },
+  "ref_go_fast": {
+   "lang": "go",
+   "ok": true,
+   "lines": 64,
+   "threads_in_source": false,
+   "build_s": 2.17,
+   "binary_kb": 2423,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.4536,
+     "cpu_s": 0.1111
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.6715,
+     "cpu_s": 0.6712
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0171,
+     "cpu_s": 0.0167
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.0575,
+     "cpu_s": 0.0576
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0047,
+     "cpu_s": 0.0043
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    66.751,
+    66.839,
+    67.126,
+    66.73,
+    68.767,
+    66.395,
+    66.758
+   ],
+   "wall": [
+    0.07,
+    0.0701,
+    0.0706,
+    0.07,
+    0.072,
+    0.0695,
+    0.07
+   ],
+   "wall_2000": [
+    0.6752,
+    0.6721,
+    0.6727
+   ],
+   "rss_kb": 5088,
+   "sim_ms_best": 66.395,
+   "wall_best": 0.0695,
+   "sim_ms_from_wall": 66.96
+  },
+  "ref_go_swar": {
+   "lang": "go",
+   "ok": true,
+   "lines": 72,
+   "threads_in_source": false,
+   "build_s": 2.15,
+   "binary_kb": 2423,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.311,
+     "cpu_s": 0.0618
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.2432,
+     "cpu_s": 0.243
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0088,
+     "cpu_s": 0.0084
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.028,
+     "cpu_s": 0.0284
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0036,
+     "cpu_s": 0.0033
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    23.362,
+    23.344,
+    23.304,
+    23.369,
+    24.249,
+    23.076,
+    23.324
+   ],
+   "wall": [
+    0.0266,
+    0.0266,
+    0.0266,
+    0.0267,
+    0.0278,
+    0.0262,
+    0.0266
+   ],
+   "wall_2000": [
+    0.2377,
+    0.2367,
+    0.2371
+   ],
+   "rss_kb": 5072,
+   "sim_ms_best": 23.076,
+   "wall_best": 0.0262,
+   "sim_ms_from_wall": 23.39
+  },
+  "ref_zig_fast": {
+   "lang": "zig",
+   "ok": true,
+   "lines": 49,
+   "threads_in_source": false,
+   "build_s": 9.33,
+   "binary_kb": 403,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.4417,
+     "cpu_s": 0.1045
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.6572,
+     "cpu_s": 0.6566
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.017,
+     "cpu_s": 0.0165
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.057,
+     "cpu_s": 0.0565
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0043,
+     "cpu_s": 0.0039
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    65.483,
+    65.288,
+    65.315,
+    65.359,
+    71.849,
+    65.361,
+    66.072
+   ],
+   "wall": [
+    0.0679,
+    0.0675,
+    0.0676,
+    0.0677,
+    0.0744,
+    0.0676,
+    0.0684
+   ],
+   "wall_2000": [
+    0.6618,
+    0.6567,
+    0.6578
+   ],
+   "rss_kb": 2304,
+   "sim_ms_best": 65.288,
+   "wall_best": 0.0675,
+   "sim_ms_from_wall": 65.47
+  },
+  "ref_zig_vector": {
+   "lang": "zig",
+   "ok": true,
+   "lines": 65,
+   "threads_in_source": false,
+   "build_s": 9.0,
+   "binary_kb": 403,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.4083,
+     "cpu_s": 0.0274
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.0922,
+     "cpu_s": 0.0915
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0038,
+     "cpu_s": 0.0034
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.0071,
+     "cpu_s": 0.0067
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0028,
+     "cpu_s": 0.0023
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    6.945,
+    6.867,
+    6.895,
+    6.957,
+    7.196,
+    6.928,
+    6.93
+   ],
+   "wall": [
+    0.0092,
+    0.0091,
+    0.0091,
+    0.0092,
+    0.0104,
+    0.0091,
+    0.0093
+   ],
+   "wall_2000": [
+    0.0713,
+    0.0716,
+    0.072
+   ],
+   "rss_kb": 2288,
+   "sim_ms_best": 6.867,
+   "wall_best": 0.0091,
+   "sim_ms_from_wall": 6.91
+  },
+  "ref_numpy": {
+   "lang": "python",
+   "ok": true,
+   "lines": 17,
+   "threads_in_source": false,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.1675,
+     "cpu_s": 0.1322
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.6487,
+     "cpu_s": 0.6474
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0858,
+     "cpu_s": 0.0845
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.1408,
+     "cpu_s": 0.1392
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0935,
+     "cpu_s": 0.0921
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    58.819,
+    58.717,
+    58.619,
+    58.611,
+    59.181,
+    58.916,
+    58.875
+   ],
+   "wall": [
+    0.1264,
+    0.1262,
+    0.1286,
+    0.1269,
+    0.1274,
+    0.128,
+    0.1277
+   ],
+   "wall_2000": [
+    0.6547,
+    0.6668,
+    0.6662
+   ],
+   "rss_kb": 31760,
+   "sim_ms_best": 58.611,
+   "wall_best": 0.1262,
+   "sim_ms_from_wall": 58.72
+  },
+  "ref_numpy_four_rolls": {
+   "lang": "python",
+   "ok": true,
+   "lines": 18,
+   "threads_in_source": false,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.0822,
+     "cpu_s": 0.0809
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 0.2895,
+     "cpu_s": 0.2882
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.0663,
+     "cpu_s": 0.065
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.0765,
+     "cpu_s": 0.0751
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0666,
+     "cpu_s": 0.0653
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    23.833,
+    23.486,
+    23.51,
+    23.448,
+    23.41,
+    23.34,
+    23.241
+   ],
+   "wall": [
+    0.0819,
+    0.0802,
+    0.0831,
+    0.0817,
+    0.0813,
+    0.0806,
+    0.0811
+   ],
+   "wall_2000": [
+    0.292,
+    0.2903,
+    0.2931
+   ],
+   "rss_kb": 28640,
+   "sim_ms_best": 23.241,
+   "wall_best": 0.0802,
+   "sim_ms_from_wall": 23.34
+  },
+  "ref_js_fast": {
+   "lang": "js",
+   "ok": true,
+   "lines": 27,
+   "threads_in_source": false,
+   "tests": [
+    {
+     "test": "512 200 start_512.txt",
+     "want": 18885,
+     "got": 18885,
+     "error": null,
+     "wall": 0.3255,
+     "cpu_s": 0.3307
+    },
+    {
+     "test": "512 2000 start_512.txt",
+     "want": 8836,
+     "got": 8836,
+     "error": null,
+     "wall": 2.2477,
+     "cpu_s": 2.2533
+    },
+    {
+     "test": "300 150 hidden_300.txt",
+     "want": 7791,
+     "got": 7791,
+     "error": null,
+     "wall": 0.1256,
+     "cpu_s": 0.1313
+    },
+    {
+     "test": "1000 50 hidden_1000.txt",
+     "want": 122523,
+     "got": 122523,
+     "error": null,
+     "wall": 0.3515,
+     "cpu_s": 0.3571
+    },
+    {
+     "test": "64 500 hidden_64.txt",
+     "want": 147,
+     "got": 147,
+     "error": null,
+     "wall": 0.0622,
+     "cpu_s": 0.0643
+    }
+   ],
+   "correct": true,
+   "multithread": false,
+   "sim_ms": [
+    270.319,
+    268.77,
+    271.159,
+    271.952,
+    272.127,
+    269.49,
+    270.409
+   ],
+   "wall": [
+    0.3223,
+    0.3203,
+    0.3231,
+    0.3244,
+    0.3241,
+    0.3215,
+    0.3228
+   ],
+   "wall_2000": [
+    2.2599,
+    2.2691,
+    2.2685
+   ],
+   "rss_kb": 47120,
+   "sim_ms_best": 268.77,
+   "wall_best": 0.3203,
+   "sim_ms_from_wall": 215.51
+  }
+ },
+ "load_after": [
+  2.880859375,
+  2.4169921875,
+  2.1435546875
+ ]
+}

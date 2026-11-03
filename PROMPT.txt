@@ -1,0 +1,26 @@
+Write the same program in six languages: C, Rust, Go, Zig, Python and JavaScript. Make each one as fast as you can.
+
+The program is Conway's Game of Life on an N x N grid whose edges wrap around (a torus), standard rules (a dead cell with 3 live neighbours is born, a live cell with 2 or 3 survives, everything else dies).
+- Usage: <program> N GENS SEED_FILE, for example: 512 200 start_512.txt
+- SEED_FILE has N lines of N characters: '1' is alive, '0' is dead.
+- Run GENS generations.
+- Print exactly one line: alive=<number of live cells after the last generation> sim_ms=<milliseconds spent running the generations, not counting reading the file>
+- start_512.txt is in this folder. With 512 200 start_512.txt the answer is alive=18885.
+
+Rules:
+- One source file per language, in this folder: life.c, life.rs, life.go, life.zig, life.py, life.js
+- Standard library only. Python may also use NumPy, which is installed. No other packages, crates or npm modules.
+- Single thread only: no threads, goroutines, workers, processes or GPU.
+- I will build and run them on this machine (Apple M1, 8 GB, macOS) exactly like this, and you cannot change these commands or add flags:
+    clang -O2 -o life_c life.c
+    rustc -C opt-level=3 -o life_rs life.rs
+    go build -o life_go life.go
+    zig build-exe -O ReleaseFast -femit-bin=life_zig life.zig      (Zig 0.17)
+    python3 life.py 512 200 start_512.txt
+    node life.js 512 200 start_512.txt                              (Node 22)
+  and run the binaries as ./life_c 512 200 start_512.txt and so on.
+- The programs must give the right answer for any N, GENS and seed file, not only this one. I will test them with other sizes and seeds.
+- Build and run them here as often as you like. Stay in this folder. There is no internet.
+- You have about 45 minutes.
+
+When you are done, write NOTES.md: for each language, one or two sentences on what you did to make it fast.
