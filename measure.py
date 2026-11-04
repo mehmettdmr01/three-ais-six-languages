@@ -3,7 +3,7 @@
 and on hidden seeds the agents never saw, then times them next to my versions in ref/ (interleaved
 rounds, best of 7, the program's own sim_ms, plus an independent estimate from wall-clock
 differences, so a wrong timer cannot win).
-  python3 measure.py claude codex gemini      -> results.json
+  python3 measure.py                          -> results.json (claude-sonnet, codex, gemini, claude-opus)
 Python runs with $PYTHON (default: python3); the video used Python 3.15 with NumPy 2.5.4."""
 import json, os, re, shutil, statistics, subprocess, sys, time
 from pathlib import Path
@@ -60,7 +60,7 @@ def prepare(name, lang, src, build):
     return d, info
 
 def main():
-    agents = sys.argv[1:] or ["claude", "codex", "gemini"]
+    agents = sys.argv[1:] or ["claude-sonnet", "codex", "gemini", "claude-opus"]
     WORK.mkdir(exist_ok=True)
     subprocess.run(["clang", "-O2", "-o", WALL, str(HERE / "lib/wall.c")], check=True)
     progs = {}

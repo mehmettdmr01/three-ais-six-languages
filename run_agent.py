@@ -3,7 +3,7 @@
 read ~/Developer, ~/Desktop, ~/.ssh, ~/.config or the other runs), with only the commands it needs.
   python3 run_agent.py claude|codex|gemini [--minutes 60]
 Writes ~/.cache/agent-runs/<agent>/ and copies the result to runs/<agent>/ when done.
-Versions used in the video: Claude Code 2.1.314 (claude-opus-5-5), Codex CLI 0.154 (gpt-5.6-terra),
+Versions used in the video: Claude Code 2.1.314/2.1.317 (claude-sonnet-5-5; CLAUDE_MODEL=claude-opus-5-5 RUN_NAME=claude-opus for the Opus run), Codex CLI 0.154 (gpt-5.6-terra),
 Antigravity CLI (gemini-3.8-flash-high). Set CLAUDE to your claude binary if it is not on PATH."""
 import json, os, shutil, subprocess, sys, time
 from pathlib import Path
@@ -13,7 +13,8 @@ H = Path.home()
 agent = sys.argv[1]
 minutes = int(sys.argv[sys.argv.index("--minutes") + 1]) if "--minutes" in sys.argv else 60
 prompt = (HERE / "PROMPT.txt").read_text().strip()
-run = H / ".cache/agent-runs" / agent
+run_name = os.environ.get("RUN_NAME", agent)
+run = H / ".cache/agent-runs" / run_name
 shutil.rmtree(run, ignore_errors=True)
 (run / ".tmp").mkdir(parents=True)
 shutil.copy(HERE / "seed/start_512.txt", run)
@@ -31,7 +32,7 @@ CMDS = ["clang", "rustc", "go", "zig", "python3", "node", "./life_c", "./life_rs
 AGY = json.dumps({"permissions": {"allow": [f"write_file({run})", f"read_file({run})", "command(*)"]}})
 SB_GEMINI = ["sandbox-exec", "-D", f"HOME={H}", "-D", f"RUN={run}", "-f", str(HERE / "sandbox-strict.sb")]
 CMD = {
-    "claude": [*SB, str(CLAUDE), "-p", prompt, "--model", "claude-opus-5-5", "--permission-mode", "acceptEdits",
+    "claude": [*SB, str(CLAUDE), "-p", prompt, "--model", os.environ.get("CLAUDE_MODEL", "claude-sonnet-5-5"), "--permission-mode", "acceptEdits",
                "--allowedTools", TOOLS, "--output-format", "stream-json", "--verbose"],
     # Codex has its own macOS sandbox (writes only in this folder, no network); it cannot run inside another one
     "codex": ["codex", "exec", "-m", "gpt-5.6-terra", "-s", "workspace-write", "--skip-git-repo-check", "-c", "mcp_servers={}",
@@ -49,11 +50,11 @@ with open(run / "transcript.jsonl", "w") as log:
                               timeout=minutes * 60, text=True).returncode
     except subprocess.TimeoutExpired:
         timed_out, code = True, -1
-meta = {"agent": agent, "model": {"claude": "claude-opus-5-5", "codex": "gpt-5.6-terra", "gemini": "gemini-3.8-flash-high"}[agent],
+meta = {"agent": agent, "model": {"claude": os.environ.get("CLAUDE_MODEL", "claude-sonnet-5-5"), "codex": "gpt-5.6-terra", "gemini": "gemini-3.8-flash-high"}[agent],
         "seconds": round(time.time() - t0), "exit_code": code, "timed_out": timed_out,
         "started": time.strftime("%Y-%m-%d %H:%M", time.localtime(t0))}
 (run / "meta.json").write_text(json.dumps(meta, indent=1))
 print(json.dumps(meta), flush=True)
-keep = HERE / "runs" / agent
+keep = HERE / "runs" / run_name
 shutil.rmtree(keep, ignore_errors=True)
 shutil.copytree(run, keep, ignore=shutil.ignore_patterns(".cache", ".tmp", "__pycache__", "life_c", "life_rs", "life_go", "life_zig"))
