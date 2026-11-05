@@ -1,6 +1,6 @@
 # Three AIs, six languages, one program
 
-Video: (link coming)
+Video: https://youtu.be/fqrK5GBewfQ
 
 I gave Claude Code, Codex and Gemini the same prompt ([PROMPT.txt](PROMPT.txt)): write Conway's Game of Life
 (512×512, wrapping edges, 200 generations) in C, Rust, Go, Zig, Python and JavaScript, as fast as you can.
